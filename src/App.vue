@@ -21,6 +21,11 @@ export default {
       books: [],
     }
   },
+
+  mounted() {
+    this.getBooks()
+  },
+
   methods: {
     addBook(book) {
       const lastId = 
@@ -36,6 +41,16 @@ export default {
       this.books = this.books.filter(
         book => book.id !== id
       )
+    },
+
+    async getBooks() {
+      try {
+        const response = await fetch('http://my-json-server.typicode.com/huwsonfirst/pnb-bookapp/books')
+        const data = await response.json()
+        this.books = data
+      } catch (error) {
+        // do something
+      }
     },
   }
 }
