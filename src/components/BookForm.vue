@@ -43,7 +43,6 @@ export default {
     },
     methods: {
         handleSubmit() {
-            console.log('Add Book button clicked...')
             this.submitting = true
             this.clearStatus()
 

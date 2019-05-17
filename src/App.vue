@@ -18,23 +18,7 @@ export default {
 
   data() {
     return {
-      books: [
-        {
-          id: 1,
-          author: 'Huw Dowden',
-          title: 'Huws Guide to Coding',
-        },
-        {
-          id: 2,
-          author: 'Kat Dowden',
-          title: 'Cooking with Kat',
-        },
-        {
-          id: 3,
-          author: 'Veronica Dowden',
-          title: 'Veronicas Book on Arts',
-        },
-      ],
+      books: [],
     }
   },
   methods: {
